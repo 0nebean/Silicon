@@ -8,7 +8,7 @@
 
 
 
-[`Introduction`](https://github.com/0nebean/net.onebean.data)
+[`Introduction`](https://0nebean.github.io/Silicon/)
 ---
 - 一言蔽之 (带有代码生成和查询API的分布式框架)
 
