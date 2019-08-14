@@ -8,7 +8,7 @@
 
 
 
-Introduction
+[`Introduction`](https://github.com/0nebean/net.onebean.data)
 ---
 - 一言蔽之 (带有代码生成和查询API的分布式框架)
 
