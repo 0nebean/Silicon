@@ -23,5 +23,4 @@ Introduction
  
 Documentation
 ---
-[Aluminium Documentation](https://github.com/0nebean/Aluminium/wiki)  
-[Sodium Documentation](https://github.com/0nebean/Sodium/wiki)
+[Silicon Documentation](https://github.com/0nebean/Silicon/wiki)
