@@ -18,8 +18,8 @@ Introduction
   - 查询sql条件封装，简单的API调用实现自定义查询
   - 基于以上实现自动生成代码的功能
   - 基于spring cloud的Restful方案的微服务架构
-  - 丰富的中间件，健康监控，调用链路分析，模块依赖分析，开箱即用[net.onebean.middleware](https://github.com/0nebean/net.onebean.m[net.onebean.middleware](https://github.com/0nebean/net.onebean.middleware)iddleware)
-  - 丰富的组件库[net.onebean.data](https://github.com/0nebean/net.onebean.data)
+  - 丰富的中间件，健康监控，调用链路分析，模块依赖分析，开箱即用[`net.onebean.middleware`](https://github.com/0nebean/net.onebean.m[net.onebean.middleware](https://github.com/0nebean/net.onebean.middleware)iddleware)
+  - 丰富的组件库[`net.onebean.data`](https://github.com/0nebean/net.onebean.data)
  
 Documentation
 ---
