@@ -11,7 +11,7 @@
 ![](https://img.shields.io/badge/middleware-rabbitMQ-lightgrey.svg)
 ![](https://img.shields.io/badge/middleware-redis-lightgrey.svg)  
 
-[`Introduction`](https://0nebean.github.io/Silicon/)
+Introduction
 ---
 - 一言蔽之 (带有代码生成和查询API的分布式框架)
 
