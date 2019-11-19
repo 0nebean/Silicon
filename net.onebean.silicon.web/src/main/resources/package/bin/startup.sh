@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #======================================================================
 # 项目启动shell脚本
@@ -28,7 +28,7 @@ BIN_PATH=$(cd `dirname $0`; pwd)
 cd `dirname $0`
 # 返回到上一级项目根目录路径
 cd ..
-# 打印项目根目录绝对路径
+# 打印项目根目录绝对路径s
 # `pwd` 执行系统命令并获得结果
 BASE_PATH=`pwd`
 
@@ -72,7 +72,7 @@ fi
 echo "" > ${LOG_PATH}
 
 # 如果项目启动日志不存在,则创建,否则追加
-#echo "${STARTUP_LOG}" >> ${LOG_STARTUP_PATH}
+echo "${STARTUP_LOG}" >> ${LOG_STARTUP_PATH}
 
 #==========================================================================================
 # JVM Configuration
@@ -84,8 +84,16 @@ echo "" > ${LOG_PATH}
 # -XX:MaxMetaspaceSize=320m:限制Metaspace增长的上限，防止因为某些情况导致Metaspace无限的使用本地内存，影响到其他程序
 # -XX:-OmitStackTraceInFastThrow:解决重复异常不打印堆栈信息问题
 #==========================================================================================
-JAVA_OPT="-server -Xms256m -Xmx256m -Xmn512m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=256m"
-JAVA_OPT="${JAVA_OPT} -XX:-OmitStackTraceInFastThrow"
+
+
+if [[ -z "$JAVA_OPT" ]]; then
+  JAVA_OPT="-server -Xms256m -Xmx256m -Xmn512m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=256m"
+  JAVA_OPT="${JAVA_OPT} -XX:-OmitStackTraceInFastThrow"
+else
+  JAVA_OPT=$(printf "%s" $JAVA_OPT| base64 -d)
+fi
+
+
 
 #=======================================================
 # 将命令启动相关日志追加到日志文件

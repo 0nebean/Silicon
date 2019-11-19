@@ -2,7 +2,7 @@
 <assembly>
     <!-- 可自定义，这里指定的是项目环境 -->
     <!-- server-local-1.0.RELEASE.tar.gz  -->
-    <id>${profileActive}-${project.version}</id>
+    <id>${profileActive}</id>
 
     <!-- 打包的类型，如果有N个，将会打N个类型的包 -->
     <formats>
@@ -20,8 +20,24 @@
         <!-- 将src/bin目录下的所有文件输出到打包后的bin目录中 -->
         <fileSet>
             <directory>${build.outputDirectory}/bin</directory>
+            <includes>
+                <include>*.bat</include>
+            </includes>
             <outputDirectory>bin</outputDirectory>
             <fileMode>0755</fileMode>
+            <lineEnding>dos</lineEnding>
+        </fileSet>
+
+
+        <!-- 将src/bin目录下的所有文件输出到打包后的bin目录中 -->
+        <fileSet>
+            <directory>${build.outputDirectory}/bin</directory>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>0755</fileMode>
+            <lineEnding>unix</lineEnding>
         </fileSet>
 
         <!-- 指定输出target/classes中的配置文件到config目录中 -->
@@ -65,7 +81,7 @@
         <!--&lt;!&ndash; 包含根目录下的文件 &ndash;&gt;-->
         <fileSet>
             <directory>${build.outputDirectory}/instructions</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>./</outputDirectory>
             <fileMode>0644</fileMode>
             <includes>
                 <include>NOTICE</include>
