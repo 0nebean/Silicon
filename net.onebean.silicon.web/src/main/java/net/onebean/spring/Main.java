@@ -1,6 +1,5 @@
 package net.onebean.spring;
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import net.onebean.core.extend.ApolloConfInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,20 +30,19 @@ import org.springframework.stereotype.Service;
 		})
 @ComponentScan(
 		basePackages = {
-		        "net.onebean.**.action.**",
+		        "net.onebean.**.action",
         },
 		includeFilters = {
 				@ComponentScan.Filter(value = Controller.class, type = FilterType.ANNOTATION)
 		})
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
-@EnableApolloConfig
 @EnableDiscoveryClient
 @EnableHystrix
 @EnableFeignClients(basePackages = "net.onebean.*.**.api.**")
 public class Main {
 
 	public static void main(String[] args) {
-		ApolloConfInitializer.init();
+		ApolloConfInitializer.initLocalConf();
 		SpringApplication.run(Main.class, args);
 	}
 
