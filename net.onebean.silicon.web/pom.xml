@@ -22,7 +22,7 @@
         <dependency>
             <groupId>net.onebean</groupId>
             <artifactId>net.onebean.silicon.service</artifactId>
-            <version>${net.onebean.silicon.service.version}</version>
+            <version>${child.model.version}</version>
         </dependency>
     </dependencies>
 
