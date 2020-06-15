@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 @ComponentScan(
         basePackages = {
                 "net.onebean.**.service",
-                "net.onebean.**.consumer",
-                "net.onebean.**.provider",
                 "net.onebean.*.**.api",
                 "net.onebean.core",
                 "net.onebean.config",
@@ -27,7 +25,7 @@ import org.springframework.stereotype.Service;
         })
 @ComponentScan(
         basePackages = {
-                "net.onebean.**.action.**",
+                "net.onebean.**.action",
         },
         includeFilters = {
                 @ComponentScan.Filter(value = Controller.class, type = FilterType.ANNOTATION)
