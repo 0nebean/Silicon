@@ -21,21 +21,8 @@
 
         <dependency>
             <groupId>net.onebean</groupId>
-            <artifactId>net.onebean.silicon.api</artifactId>
-            <version>${api.rest.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>net.onebean</groupId>
             <artifactId>net.onebean.silicon.dao</artifactId>
-            <version>${child.model.version}</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>net.onebean</groupId>-->
-<!--            <artifactId>net.onebean.data.cloud</artifactId>-->
-<!--            <version>${cloud.version}</version>-->
-<!--        </dependency>-->
 
     </dependencies>
 </project>

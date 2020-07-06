@@ -33,7 +33,7 @@ import org.springframework.stereotype.Service;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class Main {
     public static void main(String[] args) {
-        ApolloConfInitializer.initLocalConf();
+        ApolloConfInitializer.init();
         SpringApplication.run(Main.class, args);
     }
 }

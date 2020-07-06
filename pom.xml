@@ -6,8 +6,8 @@
 
     <parent>
         <groupId>net.onebean</groupId>
-        <artifactId>onebean.boot.stater</artifactId>
-        <version>1.0.3.RELEASE</version>
+        <artifactId>net.onebean.dependencies</artifactId>
+        <version>1.0.0.RELEASE</version>
     </parent>
 
     <artifactId>net.onebean.silicon</artifactId>
@@ -26,5 +26,27 @@
         <module>net.onebean.silicon.service</module>
         <module>net.onebean.silicon.web</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.onebean</groupId>
+                <artifactId>net.onebean.silicon.service</artifactId>
+                <version>${child.model.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.onebean</groupId>
+                <artifactId>net.onebean.silicon.dao</artifactId>
+                <version>${child.model.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.onebean</groupId>
+                <artifactId>net.onebean.silicon.api</artifactId>
+                <version>${child.model.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

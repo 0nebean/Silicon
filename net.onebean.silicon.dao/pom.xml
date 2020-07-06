@@ -22,7 +22,11 @@
         <dependency>
             <groupId>net.onebean</groupId>
             <artifactId>net.onebean.core</artifactId>
-            <version>${core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.onebean</groupId>
+            <artifactId>net.onebean.silicon.api</artifactId>
         </dependency>
 
     </dependencies>
